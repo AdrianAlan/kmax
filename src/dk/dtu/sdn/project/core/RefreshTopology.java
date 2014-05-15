@@ -30,14 +30,13 @@ public class RefreshTopology {
 
 		// Map JSON data to Java objects
 		ObjectMapper mMapper = new ObjectMapper();
-		mSwitchesArray = mMapper.readValue(
-				getArrayFromJSON(Constants.IP + "/wm/core/controller/switches/json", request, response),
+		mSwitchesArray = mMapper.readValue(getArrayFromJSON(Constants.IP + Constants.wmGetSwitches, request, response),
 				new TypeReference<ArrayList<Switch>>() {
 				});
-		mDevicesArray = mMapper.readValue(getArrayFromJSON(Constants.IP + "/wm/device/", request, response),
+		mDevicesArray = mMapper.readValue(getArrayFromJSON(Constants.IP + Constants.wmGetDevice, request, response),
 				new TypeReference<ArrayList<Device>>() {
 				});
-		mLinkArray = mMapper.readValue(getArrayFromJSON(Constants.IP + "/wm/topology/links/json", request, response),
+		mLinkArray = mMapper.readValue(getArrayFromJSON(Constants.IP + Constants.wmGetLinks, request, response),
 				new TypeReference<ArrayList<Link>>() {
 				});
 	}

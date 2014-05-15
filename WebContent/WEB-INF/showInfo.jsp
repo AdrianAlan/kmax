@@ -86,7 +86,7 @@ td {
 		<img src="http://flappy-birds.mobi/assets/img/loading.gif"
 			height="80px">
 	</c:if>
-	<br />version 0.1. Created and written by aap 2014 under MIT License
+	<br />version 0.11. Created and written by aap 2014 under MIT License
 	<br />
 	<br /> This project is a Floodlight service that enhance forwarding
 	controllability. By default Floodlight uses shortest paths as a routing
@@ -94,7 +94,7 @@ td {
 	forwarding to one of the others. This service uses a variant of
 	Bellman-Ford algorithm which operates with complexity of O(k*n*(m-^2))
 	where m is the number of edges and n is number of vertices. For more
-	information about the functions and settings please READ ME.
+	information about the functions and settings please <a href="http://github.com/AdrianAlan/kmax/Readme">READ ME</a>.
 	<br />
 	<br />
 	<h3>Reconfigure path:</h3>

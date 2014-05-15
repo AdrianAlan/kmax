@@ -26,7 +26,6 @@ import dk.dtu.sdn.project.utils.Constants;
 public class PrintInfo extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private static final int numberOfK = 3;
 	private RefreshTopology doRefresh;
 	private ArrayList<ArrayList<String>> alternativeRoutes;
 
@@ -101,7 +100,7 @@ public class PrintInfo extends HttpServlet {
 		} else if (sourceHost != null && !sourceHost.isEmpty() && destinationHost != null && !destinationHost.isEmpty()) {
 
 			alternativeRoutes = new ArrayList<ArrayList<String>>();
-			GenerateKShortest mKShortest = new GenerateKShortest(doRefresh, sourceHost, destinationHost, numberOfK);
+			GenerateKShortest mKShortest = new GenerateKShortest(doRefresh, sourceHost, destinationHost, Constants.theK);
 
 			if (mKShortest.getAlgoResult() == null) {
 				request.setAttribute(Constants.DevicesNumber, doRefresh.getmDevicesArray().size());

@@ -6,6 +6,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import dk.dtu.sdn.project.utils.Constants;
+
 public class SendCURL {
 
 	private URL gURL;
@@ -28,7 +30,7 @@ public class SendCURL {
 		os.write(inputJSON.getBytes("UTF-8"));
 		os.flush();
 		os.close();
-		boolean toReturn = httpConnection.getResponseMessage().equalsIgnoreCase("OK");
+		boolean toReturn = httpConnection.getResponseMessage().equalsIgnoreCase(Constants.ResponseSuccess);
 		httpConnection.disconnect();
 		return toReturn;
 	}
