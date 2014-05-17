@@ -94,7 +94,7 @@ td {
 	forwarding to one of the others. This service uses a variant of
 	Bellman-Ford algorithm which operates with complexity of O(k*n*(m-^2))
 	where m is the number of edges and n is number of vertices. For more
-	information about the functions and settings please <a href="http://github.com/AdrianAlan/kmax/Readme">READ ME</a>.
+	information about the functions and settings please <a href="http://github.com/AdrianAlan/kmax/blob/master/Readme.md">READ ME</a>.
 	<br />
 	<br />
 	<h3>Reconfigure path:</h3>
